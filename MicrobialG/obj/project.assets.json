@@ -919,11 +919,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\P.Attila\\Documents\\VSProjects\\MicrobialG\\MicrobialG.csproj",
+      "projectUniqueName": "C:\\Users\\P.Attila\\Documents\\VSProjects\\MicrobialGP\\MicrobialG\\MicrobialG.csproj",
       "projectName": "MicrobialG",
-      "projectPath": "C:\\Users\\P.Attila\\Documents\\VSProjects\\MicrobialG\\MicrobialG.csproj",
+      "projectPath": "C:\\Users\\P.Attila\\Documents\\VSProjects\\MicrobialGP\\MicrobialG\\MicrobialG.csproj",
       "packagesPath": "C:\\Users\\P.Attila\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\P.Attila\\Documents\\VSProjects\\MicrobialG\\obj\\",
+      "outputPath": "C:\\Users\\P.Attila\\Documents\\VSProjects\\MicrobialGP\\MicrobialG\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

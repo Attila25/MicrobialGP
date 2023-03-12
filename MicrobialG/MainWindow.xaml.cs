@@ -23,6 +23,7 @@ namespace MicrobialG
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show("Hello");
 
             if (File.Exists(_UserSettingsPath))
             {
