@@ -104,6 +104,8 @@ namespace MicrobialG
             else if(!PersonalSettings.GetInstance().Pythonpackageinstalled)
             {
                 InstallPythonPackages();
+                PersonalSettings.GetInstance().Pythonpackageinstalled = true;
+                PersonalSettings.GetInstance().Save(_UserSettingsPath);
             }
         }
 
@@ -177,7 +179,6 @@ namespace MicrobialG
                     using (StreamReader reader = process.StandardError)
                     {
                         result = reader.ReadToEnd();
-                        MessageBox.Show(result);
                     }
                     using (StreamReader reader = process.StandardOutput)
                     {
