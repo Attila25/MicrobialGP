@@ -3,18 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView;
 using System.Collections.ObjectModel;
 using LiveChartsCore.Kernel.Sketches;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Windows;
-using System.Collections;
-using System.Windows.Markup;
-using System.Windows.Documents;
 using System.Windows.Input;
 using Microsoft.Win32;
 using System.Diagnostics;
@@ -22,8 +15,6 @@ using Ookii.Dialogs.Wpf;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
 using System.Windows.Media;
-using LiveChartsCore.Drawing;
-using System.Windows.Ink;
 
 namespace MicrobialG
 {
