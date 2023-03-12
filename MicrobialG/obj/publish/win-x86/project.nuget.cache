@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6cQrIB4w3JU9W5cyptx6j2HfAwEqP5I83FUCnp/hfPEmM01+osLSy0p3AJK2RAx+CPJOW80V/R8RA0z7SMYJCA==",
+  "dgSpecHash": "tD6S3biiJfl1vfz9HOF3pJsqaCP8x4L7OM3T+V5A28DWRMk7R+B8YA4lrk2vhxU3KDJlTTornn+rCNGtdGqN3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\P.Attila\\Documents\\VSProjects\\MicrobialG\\MicrobialG.csproj",
+  "projectFilePath": "C:\\Users\\P.Attila\\Documents\\VSProjects\\MicrobialGP\\MicrobialG\\MicrobialG.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\P.Attila\\.nuget\\packages\\extended.wpf.toolkit\\4.4.0\\extended.wpf.toolkit.4.4.0.nupkg.sha512",
     "C:\\Users\\P.Attila\\.nuget\\packages\\harfbuzzsharp\\2.8.2.1-preview.91\\harfbuzzsharp.2.8.2.1-preview.91.nupkg.sha512",
