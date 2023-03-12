@@ -583,7 +583,7 @@ namespace MicrobialG
                     using (StreamReader reader = process.StandardError)
                     {
                         string result = reader.ReadToEnd();
-                        if (result != null || result != "")
+                        if (result != null && result != "")
                             MessageBox.Show("There was an error during the processing of the data " + result, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     using (StreamReader reader = process.StandardOutput)

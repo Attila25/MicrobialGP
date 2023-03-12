@@ -71,7 +71,7 @@ namespace MicrobialG {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MicrobialG;V1.0.0.0;component/custcolours_edit.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MicrobialG;component/custcolours_edit.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CustColours_Edit.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
