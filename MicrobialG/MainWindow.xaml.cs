@@ -23,7 +23,6 @@ namespace MicrobialG
         public MainWindow()
         {
             InitializeComponent();
-            DownloadPythonVersion();
 
             if (File.Exists(_UserSettingsPath))
             {
