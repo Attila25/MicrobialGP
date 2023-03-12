@@ -1,0 +1,99 @@
+﻿<Window x:Class="MicrobialG.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit.NET5"
+        xmlns:local="clr-namespace:MicrobialG"
+        xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+    <Window.Resources>
+        <Style TargetType="{x:Type Control}" x:Key="baseStyle">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+        </Style>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource baseStyle}"></Style>
+        <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource baseStyle}"></Style>
+        <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource baseStyle}"></Style>
+    </Window.Resources>
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Grid.ColumnSpan="3">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New" Command="{Binding Path=NewDataCmd}"/>
+                    <MenuItem Header="_Open" Command="{Binding Path=ImportDataCmd}"/>
+                    <MenuItem Header="_Save" />
+                    <MenuItem Header="Settings" Command="{Binding Path=Personalize}"/>
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+                <MenuItem Header="_Edit">
+                    <MenuItem Header="View custom colours" Command="{Binding Path=ColourEdit}"/>
+                </MenuItem>
+            </Menu>
+            <TextBox AcceptsReturn="True" />
+        </DockPanel>
+        <lvc:CartesianChart Grid.Column="1" Grid.Row="1" Grid.RowSpan="5" Series="{Binding Series}" LegendPosition="Bottom" Sections="{Binding Sections}" YAxes="{Binding YAxes}" XAxes="{Binding XAxes}">
+        </lvc:CartesianChart>
+        <StackPanel Grid.Row="1" Grid.RowSpan="4" Margin="5 10 0 0">
+            <Label Content="Chart properties:" Padding="2" FontWeight="Bold" FontSize="22"/>
+            <CheckBox Grid.Row="1" Content="Only show average values" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="8" IsChecked="{Binding IsAverage}"/>
+            <CheckBox Grid.Row="1" Content="Use custom colours" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="8" IsChecked="{Binding CustColour}"/>
+            <CheckBox Grid.Row="1" Content="Scale on different Y axis" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="8" IsChecked="{Binding NewAxis}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="1" Grid.RowSpan ="4" Margin="5 10 5 0">
+            <Label Content="Colour selector:" Padding="3" FontWeight="Bold" FontSize="22"/>
+            <xctk:ColorPicker x:Name="ColorP" Padding="3" SelectedColor="{Binding Selected_Colour}"/>
+            <Button Height="25" Margin="5 10 5 0" Content="Save custom colours" FontSize="14" FontFamily="Times New Roman" Command="{Binding SaveColours}"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="5" Margin="0 5 0 0">
+            <ScrollViewer.Resources>
+                <DataTemplate x:Key="titleText">
+                    <Border Height="24">
+                        <TextBlock Text="{Binding}" 
+                        FontSize="16" 
+                        FontWeight="Bold"
+                        FontFamily="TimesNewRoman"
+                        TextWrapping="Wrap"/>
+                    </Border>
+                </DataTemplate>
+                <Style TargetType="{x:Type Expander}">
+                    <Setter Property="HeaderTemplate" Value="{StaticResource titleText}"/>
+                </Style>
+            </ScrollViewer.Resources>
+            <ItemsControl Name="ItemsList" ItemsSource="{Binding expanders}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Expander Header="{Binding Title}">
+                                <ItemsControl Name="icTodoList" Background="LightGray" Padding="30 0 0 0" ItemsSource="{Binding expenderitems}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <CheckBox VerticalAlignment="Center" VerticalContentAlignment="Center" Content="{Binding Name}" Margin="5" IsChecked="{Binding IsChecked}" />
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </Expander>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Window>
