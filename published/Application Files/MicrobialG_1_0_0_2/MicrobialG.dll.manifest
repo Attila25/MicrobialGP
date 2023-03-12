@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MicrobialG.exe" version="1.0.0.2" publicKeyToken="5c8a6ba030b194b9" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Launcher" version="7.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Launcher.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Launcher.exe" size="16880">
+      <assemblyIdentity name="Launcher" version="7.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>8vjP25Wo3KQMAFmyjWnDPgUevKzY+iAiIJVeacSlop8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="libHarfBuzzSharp.dll" size="805800">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>p3wxbwc65k6250WTo63bn1cIW4kNlyh0GFojOLMUmwI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="libSkiaSharp.dll" size="7959976">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FB5zl0YUkuGLr9Xb8SVVnQjA6LR7kk/KhM6AyuxRdDA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG.dll.config" size="77">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sRXPO8NcIiuVI4ajMrs7gnxty0j6ChK7OorE6bM0xfQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG.exe" size="4350776">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a/oLDkTpuJ/2g9qB4ScKIolKMwdw+NSsBvFUCrvqHgo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG_P\ChartProps.py" size="136">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6c/FNMPU1oKBN0CX4vyMLn0QCwcoR/NnMNmJ56RfG7o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG_P\DataFilter.py" size="3382">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hZRq47xqPVOHN4ZMw3VMvVIz9pnvUmt73tA1cWsuYDA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG_P\ExcelReader.py" size="10091">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IvZZzyeJCK3avGyyvd7ptL/xFr7a7utBjcqVhYQAwJc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG_P\GrowthRate.py" size="3694">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6vZKja6ll7Pp/YB1CT7dmXhCycGco17k4tc2b7VuiSI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG_P\mCh.py" size="294">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lAyH8Cs45u0vwzH9DM8ZmofGpQ22hDsLq27YHBanHf0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG_P\OD.py" size="291">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aRCs3ZaMiaxsx1BKkfdlA/DcJpkqeXCgbO0GEvnagHg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MicrobialG_P\yEGFP.py" size="296">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oJPv+rQK6nPbqUwhEDdGxP0Rr2+bvDxhNzV6UafUuR4=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-DI0KKVA\P.Attila" issuerKeyHash="1c3916feca0098e740e37e7dbc701ab06275efb0" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EZDCn+ifa78aj5CXwy6Mw9OSgzpXdYLwzYaJ+N+1Y0M=</DigestValue></Reference></SignedInfo><SignatureValue>YRRKQ9Jk85p5xs3KivjMTlE2zq3/cTfDxxSbieaqKdrWnnMb/rvsa4l0h0YAlVhb46v/SBuT96Uv0UyeNAGz0HEkps5D6yHg+MhfSUczxNiKrx2Su3JkTexofAoqyjdLMc5k8UeEPkr4beQ1zSxcCJxPU387yaWBgmU7dNjQHR8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>zJzNSG/5m3cSzFLMh0ep+w7ilrn66aczUzRR1ELnlaGZJE03pKBy8vvJn7QuFvkooY5p07QaMLEmtpn80BrpJV3RmylbsoXcW4QIUAOaPrFLhpLiz8I19+Wh/OvSrTiuPwztBOGWNjgDme3t7E7T+eEmaFTQ4uG0/Bu8IHVBmkE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="4363b5dff88986cdf08275573a8392d3c38c2ec397908f1abf6b9fe89fc29011" Description="" Url=""><as:assemblyIdentity name="MicrobialG.exe" version="1.0.0.2" publicKeyToken="5c8a6ba030b194b9" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-DI0KKVA\P.Attila</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>AIQeZRkw7YxG5iM5DiPKgYSdAJ2bvuBwV69k/JceZD8=</DigestValue></Reference></SignedInfo><SignatureValue>ejPDa2HUlfghntNfuyjxwXc0K/YjpQzjtjRdNCPNHXJ28MCbtMcvPby6pkS0dhhGiHvA0qf57aKS5S6FpIweRCVBBRTYWak4LTkPV7ewtum/N/we9/GxCzZWw0QxoplrUJINwAACxaSYmN3f2+0c9Z6BLiI6K4nm8Aygy87SW4s=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>zJzNSG/5m3cSzFLMh0ep+w7ilrn66aczUzRR1ELnlaGZJE03pKBy8vvJn7QuFvkooY5p07QaMLEmtpn80BrpJV3RmylbsoXcW4QIUAOaPrFLhpLiz8I19+Wh/OvSrTiuPwztBOGWNjgDme3t7E7T+eEmaFTQ4uG0/Bu8IHVBmkE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB+TCCAWKgAwIBAgIQP/uG6tezJplBySqcbxEnIzANBgkqhkiG9w0BAQsFADA7MTkwNwYDVQQDHjAARABFAFMASwBUAE8AUAAtAEQASQAwAEsASwBWAEEAXABQAC4AQQB0AHQAaQBsAGEwHhcNMjMwMzA1MTMyNzQwWhcNMjQwMzA0MTkyNzQwWjA7MTkwNwYDVQQDHjAARABFAFMASwBUAE8AUAAtAEQASQAwAEsASwBWAEEAXABQAC4AQQB0AHQAaQBsAGEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMyczUhv+Zt3EsxSzIdHqfsO4pa5+umnM1M0UdRC55WhmSRNN6SgcvL7yZ+0Lhb5KKGOadO0GjCxJraZ/NAa6SVd0ZspW7KF3FuECFADmj6xS4aS4s/CNfflofzr0q04rj8M7QThljY4A5nt7exO0/nhJmhU0OLhtPwbvCB1QZpBAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAgRo4O2dyoVew7tj9LgDls+qmzOCSehch7qKDzm/nL4f+jBkrTdStdQ+x72MCA2cE5pvpzzGUy90CrVqUCd8SdqJMqfhzbQMeR/ShwQta/D9j7/l180cETJz9wsmMO+dsaFJda1FmMx6Ckb7etbObcmaiMN3FIRKYRqqcA0vtHHY=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
