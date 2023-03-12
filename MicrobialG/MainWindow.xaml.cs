@@ -23,6 +23,7 @@ namespace MicrobialG
         public MainWindow()
         {
             InitializeComponent();
+            DownloadPythonVersion();
 
             if (File.Exists(_UserSettingsPath))
             {
@@ -84,7 +85,8 @@ namespace MicrobialG
                     MessageBoxResult installpython = MessageBox.Show("There is no proper python version installed.\nPlease press OK to proceed with the installation.\nYou will be notified after the download was successful.", "Invalid python version", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
                     if (installpython == MessageBoxResult.OK)
                     {
-                        download_finished = DownloadPythonVersion();
+                        DownloadPythonVersion();
+                        download_finished = true;
                     }
                     else
                     {
@@ -109,22 +111,11 @@ namespace MicrobialG
             }
         }
 
-        private bool DownloadPythonVersion()
+        private void DownloadPythonVersion()
         {
-            try
+            using (var client = new WebClient())
             {
-                using (WebClient wc = new WebClient())
-                {
-                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
-                    wc.DownloadFileAsync(
-                        new System.Uri("https://www.python.org/ftp/python/3.9.13/python-3.9.13-amd64.exe"),
-                        Environment.CurrentDirectory
-                    );
-                }
-            }
-            catch (Exception)
-            {
-                throw;
+                client.DownloadFile("https://www.python.org/ftp/python/3.9.13/python-3.9.13-amd64.exe", "python-3.9.13-amd64.exe");
             }
             if (File.Exists("python-3.9.13-amd64.exe"))
             {
@@ -135,7 +126,6 @@ namespace MicrobialG
             {
                 MessageBox.Show("Download was not successful!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            return true;
         }
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
