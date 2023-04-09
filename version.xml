@@ -2,5 +2,5 @@
 <item>
   <version>3.0.0.0</version>
   <url>https://github.com/Attila25/MicrobialGP/blob/main/MicrobialG.zip?raw=true</url>
-  <mandatory>false</mandatory>
+  <mandatory>true</mandatory>
 </item>
